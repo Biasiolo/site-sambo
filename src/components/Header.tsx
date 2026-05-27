@@ -28,7 +28,7 @@ export function Header() {
         {/* Navbar */}
         <nav className="absolute top-0 left-0 z-30 flex w-full justify-center px-6 py-8 text-stone-900">
 
-          <div className="flex flex-wrap items-center justify-center gap-6 text-lg font-bold uppercase tracking-[0.25em] md:gap-8">
+          <div className="flex flex-wrap items-center justify-center gap-4 text-lg font-bold uppercase tracking-[0.25em] md:gap-6">
 
             <a
               href="#agenda"
@@ -53,15 +53,15 @@ export function Header() {
 
             <div className="h-4 w-px bg-black/20" />
 
-            <a href="#"><FaFacebookF size={18} /></a>
-            <a href="#"><FaInstagram size={20} /></a>
-            <a href="#"><FaYoutube size={20} /></a>
-            <a href="#"><FaSpotify size={20} /></a>
-            <a href="#"><FaTiktok size={18} /></a>
-            <a href="#"><FaApple size={20} /></a>
-            <a href="#"><FaAmazon size={20} /></a>
-            <a href="#"><FaDeezer size={20} /></a>
-            <a href="#"><SiTidal size={20} /></a>
+            <a href="#"><FaFacebookF size={20} /></a>
+            <a href="#"><FaInstagram size={22} /></a>
+            <a href="#"><FaYoutube size={22} /></a>
+            <a href="#"><FaSpotify size={22} /></a>
+            <a href="#"><FaTiktok size={20} /></a>
+            <a href="#"><FaApple size={22} /></a>
+            <a href="#"><FaAmazon size={22} /></a>
+            <a href="#"><FaDeezer size={22} /></a>
+            <a href="#"><SiTidal size={22} /></a>
 
           </div>
         </nav>

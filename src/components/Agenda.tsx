@@ -29,7 +29,7 @@ export function Agenda() {
         {/* Título */}
         <div className="mb-[60px] text-center">
           <h2
-            className="font-display  text-black"
+            className="font-display  text-stone-950"
             style={{
               fontSize: "clamp(2rem, 4vw, 6rem)",
               lineHeight: "0.9",
