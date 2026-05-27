@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Rubik+Dirt&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --background: #0f0a05;
+  --foreground: #f5f1e8;
+
+  --primary: #f4c430;
+  --secondary: #d94f2b;
+  --accent: #2f7d32;
+
+  --muted: #cfc7b8;
+
+  --card: #1b140d;
+  --border: rgba(255,255,255,0.08);
+
+  --radius: 24px;
+
+  --shadow-card: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Inter", sans-serif;
+
+  background-image: url("../assets/fundo1.png");
+  background-size:auto;
+  background-position: top center;
+  background-repeat: repeat-y;
+
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.font-display {
+  font-family: "Rubik Dirt", cursive;
+}
