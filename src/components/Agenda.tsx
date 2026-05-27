@@ -2,7 +2,8 @@ import { useQuery } from "@tanstack/react-query";
 
 import { fetchShows } from "@/lib/shows";
 
-
+import fundoTitle from "@/assets/fundo-title.png";
+import selo from "@/assets/selo.png";
 
 import {
   Clock3,
@@ -21,24 +22,43 @@ export function Agenda() {
   return (
     <section
       id="agenda"
-      className="bg-cover bg-top px-[20px] py-[120px] md:px-[40px] bg-transparent"
-
+      className="bg-transparent px-[20px] py-[40px] md:px-[20px]"
     >
       <div className="mx-auto max-w-[1600px]">
 
         {/* Título */}
-        <div className="mb-[60px] text-center">
-          <h2
-            className="font-display  text-stone-950"
-            style={{
-              fontSize: "clamp(2rem, 4vw, 6rem)",
-              lineHeight: "0.9",
-              letterSpacing: "-2px",
-            }}
-          >
-            AGENDA DE SHOWS
-          </h2>
-        </div>
+<div className="relative mb-[10px] flex justify-center">
+
+  {/* Área do título */}
+  <div className="relative flex w-[60%] min-w-[480px] justify-center">
+
+    {/* Fundo amarelo */}
+    <img
+      src={fundoTitle}
+      alt=""
+      className="w-full object-contain"
+    />
+
+    {/* Texto centralizado */}
+    <h2
+      className="font-display font-medium absolute left-1/2 top-3/7 z-20 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap text-stone-950"
+      style={{
+        fontSize: "clamp(1.7rem, 3.6vw, 5rem)",
+        lineHeight: "1",
+        letterSpacing: "-2px",
+      }}
+    >
+      AGENDA DE SHOWS
+    </h2>
+
+    {/* Selo */}
+    <img
+      src={selo}
+      alt=""
+      className="absolute right-[-10%] top-[-2%] z-30 w-[140px] rotate-[-8deg] object-contain md:w-[260px]"
+    />
+  </div>
+</div>
 
         {/* Loading */}
         {isLoading && (
@@ -73,7 +93,7 @@ export function Agenda() {
             {shows.map((show, index) => (
               <article
                 key={index}
-                className="relative flex min-h-[240px] flex-col justify-between overflow-hidden rounded-[42px] bg-[#7e7171] bg-cover bg-center px-[30px] py-[35px] md:flex-row md:items-center md:gap-[40px] md:px-[50px] md:py-[40px]"
+                className="relative flex min-h-[240px] flex-col justify-between overflow-hidden rounded-[42px] bg-[#7e7171] px-[30px] py-[35px] md:flex-row md:items-center md:gap-[40px] md:px-[50px] md:py-[40px]"
               >
 
                 {/* Data */}
