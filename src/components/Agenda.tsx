@@ -4,6 +4,7 @@ import { fetchShows } from "@/lib/shows";
 
 import fundoTitle from "@/assets/fundo-title.png";
 import selo from "@/assets/selo.png";
+import fundoCard from "@/assets/fundo-card.png";
 
 import {
   Clock3,
@@ -22,43 +23,43 @@ export function Agenda() {
   return (
     <section
       id="agenda"
-      className="bg-transparent px-[20px] py-[40px] md:px-[20px]"
+      className="bg-transparent px-6 py-6 md:px-6"
     >
-      <div className="mx-auto max-w-[1600px]">
+      <div className="mx-auto max-w-400">
 
         {/* Título */}
-<div className="relative mb-[10px] flex justify-center">
+        <div className="relative  flex justify-center">
 
-  {/* Área do título */}
-  <div className="relative flex w-[60%] min-w-[480px] justify-center">
+          {/* Área do título */}
+          <div className="relative flex w-[60%] min-w-120 mb-0 justify-center">
 
-    {/* Fundo amarelo */}
-    <img
-      src={fundoTitle}
-      alt=""
-      className="w-full object-contain"
-    />
+            {/* Fundo amarelo */}
+            <img
+              src={fundoTitle}
+              alt=""
+              className="w-full object-contain"
+            />
 
-    {/* Texto centralizado */}
-    <h2
-      className="font-display font-medium absolute left-1/2 top-3/7 z-20 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap text-stone-950"
-      style={{
-        fontSize: "clamp(1.7rem, 3.6vw, 5rem)",
-        lineHeight: "1",
-        letterSpacing: "-2px",
-      }}
-    >
-      AGENDA DE SHOWS
-    </h2>
+            {/* Texto centralizado */}
+            <h2
+              className="font-display font-medium absolute left-1/2 top-3/7 z-20 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap text-stone-950"
+              style={{
+                fontSize: "clamp(1.7rem, 3.6vw, 5rem)",
+                lineHeight: "1",
+                letterSpacing: "-2px",
+              }}
+            >
+              AGENDA DE SHOWS
+            </h2>
 
-    {/* Selo */}
-    <img
-      src={selo}
-      alt=""
-      className="absolute right-[-10%] top-[-2%] z-30 w-[140px] rotate-[-8deg] object-contain md:w-[260px]"
-    />
-  </div>
-</div>
+            {/* Selo */}
+            <img
+              src={selo}
+              alt=""
+              className="absolute right-[-10%] top-[-2%] z-30 w-[140px] rotate-[-8deg] object-contain md:w-[260px]"
+            />
+          </div>
+        </div>
 
         {/* Loading */}
         {isLoading && (
@@ -88,16 +89,22 @@ export function Agenda() {
 
         {/* Agenda */}
         {shows && shows.length > 0 && (
-          <div className="flex flex-col gap-[30px]">
+          <div className="flex flex-col gap-7.5">
 
             {shows.map((show, index) => (
               <article
                 key={index}
-                className="relative flex min-h-[240px] flex-col justify-between overflow-hidden rounded-[42px] bg-[#7e7171] px-[30px] py-[35px] md:flex-row md:items-center md:gap-[40px] md:px-[50px] md:py-[40px]"
+                className="relative flex min-h-45 flex-col justify-between overflow-hidden rounded-[42px] px-[12%] py-8.75 md:flex-row md:items-center md:gap-10 md:px-[12%] md:py-10"
+                style={{
+                  backgroundImage: `url(${fundoCard})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
               >
 
                 {/* Data */}
-                <div className="flex items-center gap-[20px] md:min-w-[280px]">
+                <div className="flex items-center gap-5 md:min-w-70">
 
                   <h3
                     className="font-display text-black"
@@ -109,16 +116,13 @@ export function Agenda() {
                     {show.data}
                   </h3>
 
-                  <span className="rotate-180 text-[0.9rem] font-extrabold uppercase tracking-[0.3em] text-yellow-400 [writing-mode:vertical-rl] md:text-[1rem]">
-                    {show.mes}
-                  </span>
                 </div>
 
                 {/* Infos */}
-                <div className="mt-[30px] flex flex-1 flex-col justify-center gap-[18px] md:mt-0">
+                <div className="mt-8 flex flex-1 flex-col justify-center gap-2 md:mt-2">
 
                   <div
-                    className="font-black text-black"
+                    className="font-black text-stone-900"
                     style={{
                       fontSize: "clamp(2rem, 4vw, 3rem)",
                       lineHeight: "1",
@@ -127,20 +131,20 @@ export function Agenda() {
                     {show.local}
                   </div>
 
-                  <div className="flex items-center gap-[12px] text-[1rem] text-white/85 md:text-[1.1rem]">
+                  <div className="flex items-center gap-[12px] text-[1rem] text-stone-800 md:text-[1.3rem]">
                     <MapPin
                       size={18}
-                      color="#facc15"
+                      color="#faaa15"
                     />
 
                     {show.cidade}
                   </div>
 
                   {show.horario && (
-                    <div className="flex items-center gap-[10px] text-[1rem] text-white">
+                    <div className="flex items-center gap-[10px] text-[1rem] text-stone-800">
                       <Clock3
                         size={18}
-                        color="#facc15"
+                        color="#faaa15"
                       />
 
                       {show.horario}
@@ -154,7 +158,7 @@ export function Agenda() {
                     href={show.ingresso}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-[30px] inline-flex whitespace-nowrap rounded-full bg-yellow-400 px-[32px] py-[18px] text-center text-[0.9rem] font-black uppercase tracking-[0.15em] text-black transition-transform hover:scale-[1.02] md:mt-0"
+                    className="mt-[30px] inline-flex whitespace-nowrap rounded-full bg-amber-500 px-[32px] py-[18px] text-center text-[0.9rem] font-black uppercase tracking-[0.15em] text-black transition-transform hover:scale-[1.02] md:mt-0"
                   >
                     Comprar ingresso
                   </a>
