@@ -34,7 +34,7 @@ body {
   color: var(--foreground);
   font-family: "Inter", sans-serif;
 
-  background-image: url("../assets/fundo1.png");
+  background-image: url("../assets/fundo1.webp");
   background-size:auto;
   background-position: top center;
   background-repeat: repeat-y;

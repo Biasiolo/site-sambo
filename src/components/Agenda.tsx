@@ -89,80 +89,85 @@ export function Agenda() {
 
         {/* Agenda */}
         {shows && shows.length > 0 && (
-          <div className="flex flex-col gap-7.5">
+          <div className="flex flex-col gap-2">
 
             {shows.map((show, index) => (
               <article
                 key={index}
-                className="relative flex min-h-45 flex-col justify-between overflow-hidden rounded-[42px] px-[12%] py-8.75 md:flex-row md:items-center md:gap-10 md:px-[12%] md:py-10"
-                style={{
-                  backgroundImage: `url(${fundoCard})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                }}
+                className="relative overflow-hidden rounded-[42px]"
               >
 
-                {/* Data */}
-                <div className="flex items-center gap-5 md:min-w-70">
+                {/* Fundo */}
+                <img
+                  src={fundoCard}
+                  alt=""
+                  className="absolute inset-0 h-full w-full object-fill"
+                />
 
-                  <h3
-                    className="font-display text-black"
-                    style={{
-                      fontSize: "clamp(4rem, 8vw, 8rem)",
-                      lineHeight: "0.8",
-                    }}
-                  >
-                    {show.data}
-                  </h3>
+                {/* Conteúdo */}
+                <div className="relative z-10 flex min-h-50 flex-col justify-between px-[12%] py-8.75 md:flex-row md:items-center md:gap-12 md:px-[12%] md:py-10">
 
-                </div>
+                  {/* Data */}
+                  <div className="flex items-center gap-5 md:min-w-70">
 
-                {/* Infos */}
-                <div className="mt-8 flex flex-1 flex-col justify-center gap-2 md:mt-2">
+                    <h3
+                      className="font-display text-black"
+                      style={{
+                        fontSize: "clamp(3rem, 6vw, 6rem)",
+                        lineHeight: "0.8",
+                      }}
+                    >
+                      {show.data}
+                    </h3>
 
-                  <div
-                    className="font-black text-stone-900"
-                    style={{
-                      fontSize: "clamp(2rem, 4vw, 3rem)",
-                      lineHeight: "1",
-                    }}
-                  >
-                    {show.local}
                   </div>
 
-                  <div className="flex items-center gap-[12px] text-[1rem] text-stone-800 md:text-[1.3rem]">
-                    <MapPin
-                      size={18}
-                      color="#faaa15"
-                    />
+                  {/* Infos */}
+                  <div className="mt-8 flex flex-1 flex-col justify-center gap-2 md:mt-2">
 
-                    {show.cidade}
-                  </div>
+                    <div
+                      className="font-black text-stone-900"
+                      style={{
+                        fontSize: "clamp(2rem, 4vw, 3rem)",
+                        lineHeight: "1",
+                      }}
+                    >
+                      {show.local}
+                    </div>
 
-                  {show.horario && (
-                    <div className="flex items-center gap-[10px] text-[1rem] text-stone-800">
-                      <Clock3
+                    <div className="flex items-center gap-[12px] text-[1rem] text-stone-800 md:text-[1.3rem]">
+                      <MapPin
                         size={18}
                         color="#faaa15"
                       />
 
-                      {show.horario}
+                      {show.cidade}
                     </div>
+
+                    {show.horario && (
+                      <div className="flex items-center gap-[10px] text-[1rem] text-stone-800">
+                        <Clock3
+                          size={18}
+                          color="#faaa15"
+                        />
+
+                        {show.horario}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* CTA */}
+                  {show.ingresso && (
+                    <a
+                      href={show.ingresso}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-[30px] inline-flex whitespace-nowrap rounded-full bg-amber-500 px-[32px] py-[18px] text-center text-[0.9rem] font-black uppercase tracking-[0.15em] text-black transition-transform hover:scale-[1.02] md:mt-0"
+                    >
+                      Comprar ingresso
+                    </a>
                   )}
                 </div>
-
-                {/* CTA */}
-                {show.ingresso && (
-                  <a
-                    href={show.ingresso}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-[30px] inline-flex whitespace-nowrap rounded-full bg-amber-500 px-[32px] py-[18px] text-center text-[0.9rem] font-black uppercase tracking-[0.15em] text-black transition-transform hover:scale-[1.02] md:mt-0"
-                  >
-                    Comprar ingresso
-                  </a>
-                )}
               </article>
             ))}
           </div>
