@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { MobileLinks } from "@/components/MobileLinks";
 import { Agenda } from "@/components/Agenda";
 import { Integrantes } from "@/components/Integrantes";
+import { Contato } from "@/components/Contato";
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
         <Header />
         <Agenda />
         <Integrantes />
+        <Contato />
       </div>
 
       <div className="block md:hidden">
