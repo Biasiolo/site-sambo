@@ -67,10 +67,10 @@ export function Header() {
         </nav>
 
         {/* HERO */}
-        <div className="relative z-10 flex min-h-screen items-start justify-center px-4 pt-[120px]">
+        <div className="relative z-10 flex min-h-screen items-start justify-center px-4 pt-30">
 
           {/* Colagem central */}
-          <div className="relative w-full max-w-[1180px]">
+          <div className="relative w-full max-w-295">
 
             {/* Fundo colorido */}
             <img

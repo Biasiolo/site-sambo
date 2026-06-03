@@ -56,18 +56,18 @@ export function Agenda() {
             <img
               src={selo}
               alt=""
-              className="absolute right-[-10%] top-[-2%] z-30 w-[140px] rotate-[-8deg] object-contain md:w-[260px]"
+              className="absolute right-[-10%] top-[-2%] z-30 w-35 rotate-[-8deg] object-contain md:w-65"
             />
           </div>
         </div>
 
         {/* Loading */}
         {isLoading && (
-          <div className="flex flex-col gap-[30px]">
+          <div className="flex flex-col gap-7.5">
             {[0, 1, 2, 3].map((i) => (
               <div
                 key={i}
-                className="h-[240px] animate-pulse rounded-[40px] bg-white/10"
+                className="h-60 animate-pulse rounded-[40px] bg-white/10"
               />
             ))}
           </div>
@@ -75,14 +75,14 @@ export function Agenda() {
 
         {/* Error */}
         {isError && (
-          <div className="rounded-[30px] bg-black/40 p-[40px] text-center text-black">
+          <div className="rounded-[30px] bg-black/40 p-10 text-center text-black">
             Não foi possível carregar a agenda.
           </div>
         )}
 
         {/* Empty */}
         {shows && shows.length === 0 && (
-          <div className="rounded-[30px] bg-black/40 p-[40px] text-center text-black">
+          <div className="rounded-[30px] bg-black/40 p-10 text-center text-black">
             Em breve novas datas.
           </div>
         )}
@@ -135,7 +135,7 @@ export function Agenda() {
                       {show.local}
                     </div>
 
-                    <div className="flex items-center gap-[12px] text-[1rem] text-stone-800 md:text-[1.3rem]">
+                    <div className="flex items-center gap-3 text-[1rem] text-stone-800 md:text-[1.3rem]">
                       <MapPin
                         size={18}
                         color="#faaa15"
@@ -145,7 +145,7 @@ export function Agenda() {
                     </div>
 
                     {show.horario && (
-                      <div className="flex items-center gap-[10px] text-[1rem] text-stone-800">
+                      <div className="flex items-center gap-2.5 text-[1rem] text-stone-800">
                         <Clock3
                           size={18}
                           color="#faaa15"
@@ -162,7 +162,7 @@ export function Agenda() {
                       href={show.ingresso}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-[30px] inline-flex whitespace-nowrap rounded-full bg-amber-500 px-[32px] py-[18px] text-center text-[0.9rem] font-black uppercase tracking-[0.15em] text-black transition-transform hover:scale-[1.02] md:mt-0"
+                      className="mt-7.5 inline-flex whitespace-nowrap rounded-full bg-amber-500 px-8 py-4.5 text-center text-[0.9rem] font-black uppercase tracking-[0.15em] text-black transition-transform hover:scale-[1.02] md:mt-0"
                     >
                       Comprar ingresso
                     </a>

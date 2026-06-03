@@ -11,7 +11,7 @@ export function Contato() {
             id="contato"
             className="px-6 pb-54 pt-0"
         >
-            <div className="mx-auto max-w-[1400px]">
+            <div className="mx-auto max-w-350">
 
                 <div className="relative flex justify-center">
 
@@ -24,7 +24,7 @@ export function Contato() {
               left-[1%]
               bottom-[-27%]
               hidden
-              w-[420px]
+              w-105
               -translate-y-1/2
               z-99
 
@@ -33,7 +33,7 @@ export function Contato() {
                     />
 
                     {/* papel azul */}
-                    <div className="relative w-full max-w-[720px]">
+                    <div className="relative w-full max-w-180">
 
                         <img
                             src={papelContato}
@@ -98,7 +98,7 @@ export function Contato() {
               right-[12%]
               top-[20%]
               hidden
-              w-[280px]
+              w-70
               rotate-[-10deg]
               lg:block
             "

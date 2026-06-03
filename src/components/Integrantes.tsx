@@ -52,7 +52,7 @@ export function Integrantes() {
     return (
         <section
             id="integrantes"
-            className="px-6 py-12"
+            className="px-8 py-12"
         >
             <div className="mx-auto max-w-350">
 
@@ -139,7 +139,7 @@ export function Integrantes() {
                 </div>
 
                 {/* Integrantes */}
-                <div className="grid grid-cols-1 gap-y-2 sm:grid-cols-2">
+                <div className="grid grid-cols-1 gap-y-1 sm:grid-cols-2">
 
                     {integrantes.map((integrante) => (
                         <a
@@ -149,7 +149,7 @@ export function Integrantes() {
                             rel="noopener noreferrer"
                             className="group relative block"
                         >
-                            <div className="relative h-210 w-full">
+                            <div className="relative h-220 w-full">
                                 <img
                                     src={integrante.foto}
                                     alt={integrante.nome}
