@@ -31,13 +31,13 @@ export function Agenda() {
         <div className="relative  flex justify-center">
 
           {/* Área do título */}
-          <div className="relative flex w-[60%] min-w-120 mb-0 justify-center">
+          <div className="relative flex w-[60%] min-w-120 mb-[-3%] justify-center">
 
             {/* Fundo amarelo */}
             <img
               src={fundoTitle}
               alt=""
-              className="w-full object-contain"
+              className="w-full object-contain "
             />
 
             {/* Texto centralizado */}
@@ -89,26 +89,26 @@ export function Agenda() {
 
         {/* Agenda */}
         {shows && shows.length > 0 && (
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-1">
 
             {shows.map((show, index) => (
               <article
                 key={index}
-                className="relative overflow-hidden rounded-[42px]"
+                className="relative overflow-hidden "
               >
 
                 {/* Fundo */}
                 <img
                   src={fundoCard}
                   alt=""
-                  className="absolute inset-0 h-full w-full object-fill"
+                  className="absolute inset-0 h-full w-full object-fill px-10"
                 />
 
                 {/* Conteúdo */}
-                <div className="relative z-10 flex min-h-50 flex-col justify-between px-[12%] py-8.75 md:flex-row md:items-center md:gap-12 md:px-[12%] md:py-10">
+                <div className="relative z-10 flex min-h-50 flex-col justify-between px-[12%] py-9 md:flex-row md:items-center md:gap-10 md:px-[12%] md:py-9">
 
                   {/* Data */}
-                  <div className="flex items-center gap-5 md:min-w-70">
+                  <div className="flex items-center gap-5 md:min-w-70 ">
 
                     <h3
                       className="font-display text-black"
