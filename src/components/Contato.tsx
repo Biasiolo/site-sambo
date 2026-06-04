@@ -9,7 +9,7 @@ export function Contato() {
     return (
         <section
             id="contato"
-            className="px-6 pb-54 pt-0"
+            className="px-6 pb-36 pt-0"
         >
             <div className="mx-auto max-w-350">
 
@@ -105,6 +105,21 @@ export function Contato() {
                     />
 
                 </div>
+
+            </div>
+            <div className="pt-36 flex justify-center">
+                <a
+                    href="#topo"
+                    className="
+    font-display
+      font-mbold
+      text-[1.5rem]
+      text-gray-800
+      transition-all
+    "
+                >
+                    ↑ Voltar ao topo
+                </a>
             </div>
         </section>
     );
