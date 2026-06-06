@@ -127,7 +127,7 @@ export function Agenda() {
                   </div>
 
                   {/* Infos */}
-                  <div className="mt-8 flex flex-1 flex-col justify-center gap-2 md:mt-2">
+                  <div className="mt-8 flex flex-1 flex-col justify-center gap-2 md:mt-2 md:ml-12">
 
                     <div
                       className="font-black text-stone-900"
