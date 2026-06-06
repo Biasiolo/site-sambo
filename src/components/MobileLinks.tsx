@@ -1,4 +1,4 @@
-import heroBanner from "@/assets/banner1.png";
+import heroBanner from "@/assets/convert/banner1.webp";
 
 import {
   FaInstagram,

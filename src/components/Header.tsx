@@ -1,6 +1,6 @@
-import logoSambo from "@/assets/logo-sambo.png";
-import bandaFront from "@/assets/banda-front.png";
-import colagemBg from "@/assets/colagem-bg.png";
+import logoSambo from "@/assets/convert/logo-sambo.webp";
+import bandaFront from "@/assets/convert/banda-front.webp";
+import colagemBg from "@/assets/convert/colagem-bg.webp";
 
 import {
   FaInstagram,
@@ -156,7 +156,8 @@ export function Header() {
             {/* Fundo colorido */}
             <img
               src={colagemBg}
-              alt=""
+              loading="lazy"
+              alt="colagemBg"
               className="relative z-10 w-full object-contain"
             />
 
@@ -164,6 +165,7 @@ export function Header() {
             <img
               src={bandaFront}
               alt="Integrantes Sambô"
+              loading="lazy"
               className="absolute bottom-[8%] left-1/2 z-20 w-[82%] -translate-x-1/2 object-contain"
             />
 
@@ -171,6 +173,7 @@ export function Header() {
             <img
               src={logoSambo}
               alt="Logo Sambô"
+              loading="lazy"
               className="absolute top-[-12%] left-1/2 z-30 w-[95%] -translate-x-1/2 object-contain"
             />
           </div>

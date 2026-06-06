@@ -1,15 +1,15 @@
 import { FaWhatsapp } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 
-import papelContato from "@/assets/papel-contato.png";
-import seloPreto from "@/assets/selo-preto.png";
-import seloAmarelo from "@/assets/selo-amarelo.png";
+import papelContato from "@/assets/convert/papel-contato.webp";
+import seloPreto from "@/assets/convert/selo-preto.webp";
+import seloAmarelo from "@/assets/convert/selo-amarelo.webp";
 
 export function Contato() {
     return (
         <section
             id="contato"
-            className="px-6 pb-36 pt-0"
+            className="px-6 pb-36 pt-12"
         >
             <div className="mx-auto max-w-350">
 

@@ -139,7 +139,7 @@ export function Integrantes() {
                 </div>
 
                 {/* Integrantes */}
-                <div className="grid grid-cols-1 gap-y-1 sm:grid-cols-2">
+                <div className="grid grid-cols-1 gap-x-1 gap-y-12 sm:grid-cols-2 mt-10">
 
                     {integrantes.map((integrante) => (
                         <a
@@ -149,29 +149,13 @@ export function Integrantes() {
                             rel="noopener noreferrer"
                             className="group relative block"
                         >
-                            <div className="relative h-220 w-full">
+                            <div className="relative h-180 w-full">
                                 <img
                                     src={integrante.foto}
                                     alt={integrante.nome}
-                                    className="absolute inset-0 h-full w-full object-contain object-bottom transition-transform duration-300 group-hover:scale-105"
+                                    className="absolute inset-0 h-full w-full object-contain object-center transition-transform duration-300 group-hover:scale-105"
                                 />
                             </div>
-
-                            {/* Nome sobre a foto */}
-                            <div
-                                className="
-          absolute
-          bottom-[13%]
-          left-1/2
-          z-20
-          w-[70%]
-          -translate-x-1/2
-          text-center
-        "
-                            >
-
-                            </div>
-
                         </a>
                     ))}
 

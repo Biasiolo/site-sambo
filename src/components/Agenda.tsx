@@ -2,9 +2,9 @@ import { useQuery } from "@tanstack/react-query";
 
 import { fetchShows } from "@/lib/shows";
 
-import fundoTitle from "@/assets/fundo-title.png";
-import selo from "@/assets/selo.png";
-import fundoCard from "@/assets/fundo-card.png";
+import fundoTitle from "@/assets/convert/fundo-title.webp";
+import selo from "@/assets/convert/selo.webp";
+import fundoCard from "@/assets/convert/fundo-card.webp";
 
 import {
   Clock3,
@@ -34,9 +34,11 @@ export function Agenda() {
           <div className="relative flex w-[60%] min-w-120 mb-[-3%] justify-center">
 
             {/* Fundo amarelo */}
+
             <img
               src={fundoTitle}
-              alt=""
+              alt="fundoTitle"
+              loading="lazy"
               className="w-full object-contain "
             />
 
@@ -55,7 +57,8 @@ export function Agenda() {
             {/* Selo */}
             <img
               src={selo}
-              alt=""
+              loading="lazy"
+              alt="selo"
               className="absolute right-[-10%] top-[-2%] z-30 w-35 rotate-[-8deg] object-contain md:w-65"
             />
           </div>
@@ -100,7 +103,8 @@ export function Agenda() {
                 {/* Fundo */}
                 <img
                   src={fundoCard}
-                  alt=""
+                  loading="lazy"
+                  alt="fundoCard"
                   className="absolute inset-0 h-full w-full object-fill px-10"
                 />
 
