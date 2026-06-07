@@ -112,15 +112,31 @@ export function Contato() {
                     href="#topo"
                     className="
     font-display
-      font-mbold
+      font-heading
       text-[1.5rem]
-      text-gray-800
+      text-slate-950
       transition-all
     "
                 >
-                    ↑ Voltar ao topo
+                    Voltar ao topo
+                </a>
+            </div>
+            <div className="flex justify-start">
+                <a
+                    href="https://github.com/Biasiolo"
+                    target="_blank"
+                    className=" top-[-20%
+    font-display
+      font-medium
+      text-[1rem]
+      text-slate-950
+      transition-all
+    "
+                >
+                    @biasiolo
                 </a>
             </div>
         </section>
+
     );
 }
