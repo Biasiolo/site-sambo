@@ -2,12 +2,12 @@ import papel from "@/assets/integrantes/papel.png";
 import faixaTitulo from "@/assets/integrantes/faixa-titulo.png";
 import smile from "@/assets/integrantes/smile.png";
 
-import Janaina from "@/assets/integrantes/1.webp";
-import Digao from "@/assets/integrantes/2.webp";
-import Fejuca from "@/assets/integrantes/3.webp";
-import Gama from "@/assets/integrantes/4.webp";
-import Jackes from "@/assets/integrantes/5.webp";
-import Ze from "@/assets/integrantes/6.webp";
+import Janaina from "@/assets/integrantes/1.png";
+import Digao from "@/assets/integrantes/2.png";
+import Fejuca from "@/assets/integrantes/3.png";
+import Gama from "@/assets/integrantes/4.png";
+import Jackes from "@/assets/integrantes/5.png";
+import Ze from "@/assets/integrantes/6.png";
 
 const integrantes = [
     {
@@ -88,7 +88,7 @@ export function Integrantes() {
                 {/* Texto */}
                 <div className="mb-2 flex justify-center">
 
-                    <div className="relative w-full max-w-300">
+                    <div className="relative w-full max-w-320">
 
                         <img
                             src={papel}
@@ -99,9 +99,9 @@ export function Integrantes() {
                         <div className="absolute inset-0 flex items-center justify-center px-[6%] py-[8%]">
 
                             <div
-                                className="max-w-[82%] text-left font-extrabold text-stone-900"
+                                className="max-w-[82%] text-left font-extrabold text-stone-800"
                                 style={{
-                                    fontSize: "clamp(1.1rem, 1vw, 1.25rem)",
+                                    fontSize: "clamp(1.2rem, 1.05vw, 1.35rem)",
                                     lineHeight: "1.35",
                                 }}
                             >
@@ -139,7 +139,7 @@ export function Integrantes() {
                 </div>
 
                 {/* Integrantes */}
-                <div className="grid grid-cols-1 gap-x-1 gap-y-12 sm:grid-cols-2 mt-10">
+                <div className="grid grid-cols-1  gap-y-12 sm:grid-cols-2 mt-10">
 
                     {integrantes.map((integrante) => (
                         <a
