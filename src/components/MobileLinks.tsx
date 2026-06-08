@@ -36,7 +36,7 @@ export function MobileLinks({
 
   return (
     <>
-      <section className="relative min-h-screen overflow-hidden px-4">
+      <section className="relative min-h-screen overflow-hidden px-4 pb-6">
 
         {/* Hero */}
         <div className="mb-8 flex justify-center">
