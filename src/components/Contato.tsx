@@ -44,7 +44,7 @@ export function Contato() {
                         <div className="absolute inset-0 flex flex-col items-center justify-center px-[10%]">
 
                             <h2
-                                className="font-display mb-8 text-center text-stone-950"
+                                className="font-display mb-6 text-center text-stone-950"
                                 style={{
                                     fontSize: "clamp(2rem,4vw,5rem)",
                                 }}
@@ -58,7 +58,7 @@ export function Contato() {
                                     href="https://wa.me/5511943067725?text=Olá%20Geisa!%20Vim%20pelo%20site%20do%20Sambô%20e%20gostaria%20de%20mais%20informações."
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="group flex items-center gap-5 transition-all hover:scale-[1.02]"
+                                    className="group flex items-center gap-4 transition-all hover:scale-[1.02]"
                                 >
                                     <FaWhatsapp
                                         size={42}
