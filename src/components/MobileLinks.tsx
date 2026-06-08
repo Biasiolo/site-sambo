@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import heroBanner from "@/assets/banner4.png";
+import heroBanner from "@/assets/base.png";
 
 import {
   FaInstagram,
@@ -43,7 +43,7 @@ export function MobileLinks({
           <img
             src={heroBanner}
             alt="Sambô"
-            className="w-full max-w-md object-contain"
+            className="w-full  object-cover"
           />
         </div>
 
