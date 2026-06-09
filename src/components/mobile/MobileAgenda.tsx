@@ -60,7 +60,7 @@ export function MobileAgenda({ onBack }: MobileAgendaProps) {
             <div className="relative z-10 top-3 px-8 py-6">
               {/* Linha 1: Data + Local (lado a lado) */}
               <div className="flex items-baseline justify-between gap-2">
-                <span className="font-display font-semibold text-2xl leading-tight text-stone-800">
+                <span className="font-display font-medium text-2xl leading-tight text-stone-800 pt-1">
                   {show.data}
                 </span>
                 <span className="font-display font-semibold uppercase leading-tight text-stone-700">
