@@ -36,7 +36,7 @@ export function MobileAgenda({ onBack }: MobileAgendaProps) {
 
       {/* Título */}
       <div className="relative mb-2 flex justify-center">
-        <div className="relative w-full max-w-[340px]">
+        <div className="relative w-full max-w-85">
           <img src={fundoTitle} alt="" className="w-full" />
           <h2 className="absolute left-1/2 top-[38%] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-display text-xl font-medium text-black">
             AGENDA DE SHOWS

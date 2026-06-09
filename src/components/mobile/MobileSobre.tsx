@@ -68,10 +68,10 @@ export function MobileSobre({ onBack }: MobileSobreProps) {
         <img
           src={smile}
           alt=""
-          className="absolute left-0 top-[-10px] z-20 w-24"
+          className="absolute left-0 -top-2.5 z-20 w-24"
         />
 
-        <div className="relative mb-0 w-full max-w-[340px]">
+        <div className="relative mb-0 w-full max-w-85">
           <img src={faixaTitulo} alt="" className="w-full" />
           <h2 className="absolute inset-0 flex items-center justify-center font-display text-xl text-black">
             INTEGRANTES

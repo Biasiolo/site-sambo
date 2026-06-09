@@ -88,7 +88,7 @@ export function Integrantes() {
                 {/* Texto */}
                 <div className="mb-2 flex justify-center">
 
-                    <div className="relative w-full max-w-320">
+                    <div className="relative w-full max-w-7xl">
 
                         <img
                             src={papel}

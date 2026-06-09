@@ -159,7 +159,7 @@ export function MobileLinks({
 
       {/* Modal Música */}
       {openMusic && (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 p-6">
+        <div className="fixed inset-0 z-9999 flex items-center justify-center bg-black/70 p-6">
 
           <div className="w-full max-w-md rounded-[30px] bg-stone-200 p-6">
 

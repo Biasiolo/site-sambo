@@ -16,7 +16,7 @@ export function MobileContato({ onBack }: MobileContatoProps) {
       {/* Área flexível que empurra o conteúdo para o centro */}
       <div className="flex-1 flex items-center justify-center">
         {/* Card de papel - centralizado horizontalmente */}
-        <div className="relative mx-auto w-full max-w-[380px]">
+        <div className="relative mx-auto w-full max-w-95">
           <img src={papelContato} alt="" className="w-full" />
 
           {/* Conteúdo centralizado dentro do papel */}
