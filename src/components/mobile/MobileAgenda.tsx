@@ -1,72 +1,104 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchShows } from "@/lib/shows";
 
+import fundoTitle from "@/assets/convert/fundo-title.webp";
+import fundoCard from "@/assets/convert/fundo-card.webp";
+import selo from "@/assets/convert/selo.webp";
+
+import { Clock3, MapPin } from "lucide-react";
+
 type MobileAgendaProps = {
   onBack: () => void;
-}
+};
 
-export function MobileAgenda({
-  onBack,
-}: MobileAgendaProps) {
+export function MobileAgenda({ onBack }: MobileAgendaProps) {
   const { data, isLoading } = useQuery({
     queryKey: ["shows"],
     queryFn: fetchShows,
   });
 
   if (isLoading) {
-    return (
-      <div className="p-6 text-center">
-        Carregando agenda...
-      </div>
-    );
+    return <div className="p-6 text-center">Carregando agenda...</div>;
   }
 
   return (
-    <div className="flex flex-col gap-4 p-6">
-
-      {data?.map((show, index) => (
-        <div
-          key={index}
-          className="rounded-3xl bg-stone-200 p-5 shadow-md"
-        >
-          <div className="mb-2 text-4xl font-black">
-            {show.data}
-          </div>
-
-          <div className="text-xl font-bold">
-            {show.local}
-          </div>
-
-          <div className="text-sm text-stone-600">
-            {show.cidade}
-          </div>
-
-          {show.horario && (
-            <div className="mt-1 text-sm">
-              {show.horario}
-            </div>
-          )}
-
-          {show.ingresso && (
-            <a
-              href={show.ingresso}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-block rounded-full bg-yellow-400 px-5 py-2 font-bold"
-            >
-              Comprar ingresso
-            </a>
-          )}
-          
-        </div>
-        
-      ))}
-      <button 
-        onClick={onBack}
-        className="mb-2 text-xl font-black font-display"
-      >
+    <div className="px-4 py-6">
+      {/* Voltar */}
+      <button onClick={onBack} className="mb-6 text-xl font-display font-semibold text-stone-900">
         ← Voltar
       </button>
+
+      {/* Título */}
+      <div className="relative mb-2 flex justify-center">
+        <div className="relative w-full max-w-[340px]">
+          <img src={fundoTitle} alt="" className="w-full" />
+          <h2 className="absolute left-1/2 top-[38%] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-display text-xl font-medium text-black">
+            AGENDA DE SHOWS
+          </h2>
+          <img
+            src={selo}
+            alt=""
+            className="absolute -right-4 -top-2 w-18 rotate-[-8deg]"
+          />
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-2">
+        {data?.map((show, index) => (
+          <article
+            key={index}
+            className="relative overflow-hidden rounded-lg shadow-md"
+          >
+            {/* Fundo do ingresso */}
+            <img
+              src={fundoCard}
+              alt=""
+              className="absolute inset-0 h-[120%] w-full object-fill"
+            />
+
+            {/* Conteúdo achatado (compacto) */}
+            <div className="relative z-10 top-3 px-8 py-6">
+              {/* Linha 1: Data + Local (lado a lado) */}
+              <div className="flex items-baseline justify-between gap-2">
+                <span className="font-display font-semibold text-2xl leading-tight text-stone-800">
+                  {show.data}
+                </span>
+                <span className="font-display font-semibold uppercase leading-tight text-stone-700">
+                  {show.local}
+                </span>
+              </div>
+
+              {/* Linha 2: Cidade + Horário (mesma linha) */}
+              <div className="mt-1 flex flex-wrap items-center justify-between gap-1 text-xs text-stone-800">
+                <div className="flex items-center gap-1">
+                  <MapPin size={12} color="#faaa15" />
+                  <span>{show.cidade}</span>
+                </div>
+                {show.horario && (
+                  <div className="flex items-center gap-1">
+                    <Clock3 size={12} color="#faaa15" />
+                    <span>{show.horario}</span>
+                  </div>
+                )}
+              </div>
+
+              {/* Botão compacto e alinhado à direita */}
+              {show.ingresso && (
+                <div className="mt-2 flex justify-end">
+                  <a
+                    href={show.ingresso}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex rounded-full bg-amber-500 px-4 py-1.5 text-xs font-black uppercase tracking-wide text-black shadow-sm transition hover:bg-amber-400"
+                  >
+                    Ingresso
+                  </a>
+                </div>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
     </div>
   );
 }
