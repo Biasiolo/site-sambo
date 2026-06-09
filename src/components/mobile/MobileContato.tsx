@@ -30,7 +30,7 @@ export function MobileContato({ onBack }: MobileContatoProps) {
               CONTATOS
             </h2>
 
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col text-center gap-6">
               <a
                 href="https://wa.me/5511943067725?text=Olá%20Geisa!%20Vim%20pelo%20site%20do%20Sambô%20e%20gostaria%20de%20mais%20informações."
                 target="_blank"
@@ -38,7 +38,7 @@ export function MobileContato({ onBack }: MobileContatoProps) {
                 className="flex items-center gap-3 transition-all"
               >
                 <FaWhatsapp size={28} className="text-stone-900" />
-                <span className="text-base font-bold text-stone-900">
+                <span className="text-2xl font-bold text-center text-stone-900">
                   (11) 94306-7725
                 </span>
               </a>
@@ -48,7 +48,7 @@ export function MobileContato({ onBack }: MobileContatoProps) {
                 className="flex items-center gap-3 transition-all"
               >
                 <FaEnvelope size={25} className="text-stone-900" />
-                <span className="text-base font-bold text-stone-900">
+                <span className="text-lg font-bold text-stone-900">
                   sambo@sambo.com.br
                 </span>
               </a>
