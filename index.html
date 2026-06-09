@@ -1,10 +1,95 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sambo-site</title>
+
+    <!-- ===== SEO Básico ===== -->
+    <title>SAMBÔ | Samba feito à mão – Banda oficial</title>
+    <meta name="description" content="Sambô é a banda que reinventou o samba com batucada presente e energia única. 20 anos de estrada, shows por todo Brasil e um estilo que virou referência." />
+    <meta name="keywords" content="Sambô, banda de samba, samba feito à mão, show de samba, roda de samba, Ricardo Gama, Júlio Fejuca, samba instrumental" />
+    <meta name="author" content="Rafael Biasiolo" />
+    <meta name="creator" content="Rafael Biasiolo" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Portuguese" />
+    <meta name="revisit-after" content="7 days" />
+
+    <!-- ===== Open Graph (Facebook, WhatsApp, LinkedIn) ===== -->
+    <meta property="og:title" content="SAMBÔ – Samba feito à mão" />
+    <meta property="og:description" content="A banda que criou um estilo próprio. Confira agenda, integrantes e toda a energia do Sambô." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sambo.com.br" />
+    <meta property="og:image" content="https://sambo.com.br/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Sambô" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <!-- ===== Twitter Card ===== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SAMBÔ – Samba feito à mão" />
+    <meta name="twitter:description" content="Agenda, integrantes e toda a energia do Sambô. Samba raiz com batucada única." />
+    <meta name="twitter:image" content="https://sambo.com.br/twitter-image.jpg" />
+    <meta name="twitter:site" content="@sambobanda" />
+
+    <!-- ===== Ícones e favicons ===== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#f4c430" />
+
+    <!-- ===== Pré-conexão para fontes e CDNs ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- ===== Preload de imagens críticas (apenas logo) ===== -->
+    <link rel="preload" as="image" href="/src/assets/logo-sambo.webp" fetchpriority="high" />
+
+    <!-- ===== Schema.org / Structured Data (JSON-LD) ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "Sambô",
+      "alternateName": "Sambô Banda",
+      "description": "Banda brasileira de samba, conhecida como 'Samba feito à mão', com mais de 20 anos de carreira.",
+      "image": "https://sambo.com.br/og-image.jpg",
+      "url": "https://sambo.com.br",
+      "sameAs": [
+        "https://www.instagram.com/sambobanda",
+        "https://www.facebook.com/sambobanda",
+        "https://www.youtube.com/@sambobanda"
+      ],
+      "founder": [
+        {
+          "@type": "Person",
+          "name": "Ricardo Gama"
+        },
+        {
+          "@type": "Person",
+          "name": "Júlio Fejuca"
+        }
+      ],
+      "genre": "Samba",
+      "location": {
+        "@type": "City",
+        "name": "São Paulo"
+      },
+      "foundingDate": "2003",
+      "author": {
+        "@type": "Person",
+        "name": "Rafael Biasiolo",
+        "url": "https://github.com/Biasiolo",
+        "jobTitle": "Desenvolvedor Web"
+      }
+    }
+    </script>
+
+    <!-- ===== Autor via link canonical alternativo ===== -->
+    <link rel="author" href="https://github.com/Biasiolo" />
+
+    <title>SAMBÔ - Samba feito à mão!</title>
   </head>
   <body>
     <div id="root"></div>

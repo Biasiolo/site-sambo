@@ -17,6 +17,9 @@ export function MobileAgenda({ onBack }: MobileAgendaProps) {
     queryFn: fetchShows,
   });
 
+  // 🔁 Pega apenas os 4 últimos shows (mais recentes)
+  const ultimosShows = data?.slice(-5);
+
   if (isLoading) {
     return <div className="p-6 text-center">Carregando agenda...</div>;
   }
@@ -24,7 +27,10 @@ export function MobileAgenda({ onBack }: MobileAgendaProps) {
   return (
     <div className="px-4 py-6">
       {/* Voltar */}
-      <button onClick={onBack} className="mb-6 text-xl font-display font-semibold text-stone-900">
+      <button
+        onClick={onBack}
+        className="mb-6 text-xl font-display font-semibold text-stone-900"
+      >
         ← Voltar
       </button>
 
@@ -44,7 +50,8 @@ export function MobileAgenda({ onBack }: MobileAgendaProps) {
       </div>
 
       <div className="flex flex-col gap-2">
-        {data?.map((show, index) => (
+        {/* Exibe apenas os 4 últimos shows */}
+        {ultimosShows?.map((show, index) => (
           <article
             key={index}
             className="relative overflow-hidden rounded-lg shadow-md"

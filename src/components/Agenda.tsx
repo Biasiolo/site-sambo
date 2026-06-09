@@ -18,7 +18,7 @@ export function Agenda() {
     staleTime: 60_000,
   });
 
-  const shows = data?.slice(0, 4);
+  const shows = data?.slice(-4);
 
   return (
     <section
