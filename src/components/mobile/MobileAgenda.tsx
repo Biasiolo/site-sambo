@@ -67,16 +67,16 @@ export function MobileAgenda({ onBack }: MobileAgendaProps) {
             <div className="relative z-10 top-3 px-8 py-6">
               {/* Linha 1: Data + Local (lado a lado) */}
               <div className="flex items-baseline justify-between gap-2">
-                <span className="font-display font-medium text-2xl leading-tight text-stone-800 pt-1">
+                <span className="font-display font-medium ms-4 text-4xl leading-tight text-stone-800 pt-2">
                   {show.data}
                 </span>
-                <span className="font-display font-semibold uppercase leading-tight text-stone-700">
+                <span className="font-display me-2 font-semibold uppercase leading-tight text-stone-700">
                   {show.local}
                 </span>
               </div>
 
               {/* Linha 2: Cidade + Horário (mesma linha) */}
-              <div className="mt-1 flex flex-wrap items-center justify-between gap-1 text-xs text-stone-800">
+              <div className="mt-1 flex flex-wrap items-center justify-between gap-1 text-sm text-stone-800 px-2">
                 <div className="flex items-center gap-1">
                   <MapPin size={12} color="#faaa15" />
                   <span>{show.cidade}</span>
@@ -105,6 +105,15 @@ export function MobileAgenda({ onBack }: MobileAgendaProps) {
             </div>
           </article>
         ))}
+      </div>
+      {/* Voltar - bottom */}
+      <div className="my-8 flex justify-center">
+        <button
+          onClick={onBack}
+          className="text-xl font-display font-semibold text-stone-900"
+        >
+          ← Voltar
+        </button>
       </div>
     </div>
   );

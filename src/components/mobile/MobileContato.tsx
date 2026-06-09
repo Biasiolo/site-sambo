@@ -11,12 +11,7 @@ export function MobileContato({ onBack }: MobileContatoProps) {
     // Container principal ocupa a altura inteira da tela
     <div className="flex min-h-screen flex-col px-4">
       {/* Botão Voltar - mantido no topo */}
-      <button
-        onClick={onBack}
-        className="mb-6 mt-6 text-lg font-display font-black self-start"
-      >
-        ← Voltar
-      </button>
+      
 
       {/* Área flexível que empurra o conteúdo para o centro */}
       <div className="flex-1 flex items-center justify-center">
@@ -55,10 +50,19 @@ export function MobileContato({ onBack }: MobileContatoProps) {
             </div>
           </div>
         </div>
+        
       </div>
 
       {/* Espaçamento opcional para evitar que o conteúdo encoste na borda inferior */}
-      <div className="py-4"></div>
+      {/* Voltar - bottom */}
+      <div className="mb-8 flex justify-center">
+        <button
+          onClick={onBack}
+          className="text-xl font-display font-semibold text-stone-900"
+        >
+          ← Voltar
+        </button>
+      </div>
     </div>
   );
 }

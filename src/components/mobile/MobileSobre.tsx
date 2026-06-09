@@ -55,8 +55,11 @@ type MobileSobreProps = {
 export function MobileSobre({ onBack }: MobileSobreProps) {
   return (
     <div className="px-4 py-6">
-      {/* Voltar */}
-      <button onClick={onBack} className="mb-6 text-lg font-display font-black">
+      {/* Voltar - topo */}
+      <button
+        onClick={onBack}
+        className="mb-6 text-xl font-display font-semibold text-stone-900"
+      >
         ← Voltar
       </button>
 
@@ -139,6 +142,16 @@ export function MobileSobre({ onBack }: MobileSobreProps) {
             />
           </a>
         ))}
+      </div>
+
+      {/* Voltar - bottom */}
+      <div className="mt-8 flex justify-center">
+        <button
+          onClick={onBack}
+          className="text-xl font-display font-semibold text-stone-900"
+        >
+          ← Voltar
+        </button>
       </div>
     </div>
   );
