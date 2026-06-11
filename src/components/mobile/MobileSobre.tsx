@@ -22,18 +22,7 @@ const integrantes = [
     url: "https://instagram.com/digaodisouza",
     foto: Digao,
   },
-  {
-    nome: "FEJUCA",
-    instagram: "@fejuca",
-    url: "https://instagram.com/fejuca",
-    foto: Fejuca,
-  },
-  {
-    nome: "RICARDO GAMA",
-    instagram: "@gamaprodutor",
-    url: "https://instagram.com/gamaprodutor",
-    foto: Gama,
-  },
+  
   {
     nome: "JACQUES MONASTIER",
     instagram: "@jacquesbatera",
@@ -45,6 +34,18 @@ const integrantes = [
     instagram: "@zedapaz",
     url: "https://instagram.com/zedapaz",
     foto: Ze,
+  },
+  {
+    nome: "FEJUCA",
+    instagram: "@fejuca",
+    url: "https://instagram.com/fejuca",
+    foto: Fejuca,
+  },
+  {
+    nome: "RICARDO GAMA",
+    instagram: "@gamaprodutor",
+    url: "https://instagram.com/gamaprodutor",
+    foto: Gama,
   },
 ];
 
