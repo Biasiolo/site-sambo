@@ -168,7 +168,7 @@ export function Agenda() {
                       rel="noopener noreferrer"
                       className="mt-7.5 inline-flex whitespace-nowrap rounded-full bg-amber-500 px-8 py-4.5 text-center text-[0.9rem] font-black uppercase tracking-[0.15em] text-black transition-transform hover:scale-[1.02] md:mt-0"
                     >
-                      Comprar ingresso
+                      Mais Informações
                     </a>
                   )}
                 </div>
