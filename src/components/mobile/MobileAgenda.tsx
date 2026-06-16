@@ -98,7 +98,7 @@ export function MobileAgenda({ onBack }: MobileAgendaProps) {
                     rel="noopener noreferrer"
                     className="inline-flex rounded-full bg-amber-500 px-4 py-1.5 text-xs font-black uppercase tracking-wide text-black shadow-sm transition hover:bg-amber-400"
                   >
-                    Ingresso
+                    + Informações
                   </a>
                 </div>
               )}
